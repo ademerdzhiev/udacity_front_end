@@ -1,0 +1,9 @@
+ header {
+   color: #9f9c9c;
+   padding: 20px 0;
+   margin-buttom: 40px;
+   text-transform: uppercase;
+   border-bottom: 2px solid #b0e0ea;
+   display: flex;
+   justify-content: space-between;
+ }
