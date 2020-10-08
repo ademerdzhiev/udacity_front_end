@@ -7,4 +7,5 @@ header button {
   cursor: pointer;
   border-radius: 1.25rem;
   background-color: #51bb7b;
+  justify-self: end;
 }

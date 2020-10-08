@@ -4,6 +4,8 @@
    margin-buttom: 40px;
    text-transform: uppercase;
    border-bottom: 2px solid #b0e0ea;
-   display: flex;
+   grid-area: header;
+   display: grid;
    justify-content: space-between;
+   grid-template-columns: 1fr 1fr;
  }
