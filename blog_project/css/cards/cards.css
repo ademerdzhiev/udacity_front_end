@@ -1,8 +1,16 @@
- .cards {
+.cards {
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+  min-height: 150px;
+  background-color: #2bb673;
+}
+
+
+ /* .cards {
    display: flex;
    justify-content: space-between;
- }
+ } */
 
-.card {
+/* .card {
   flex: 0 1 24%;
-}
+} */

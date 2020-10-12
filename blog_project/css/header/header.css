@@ -1,11 +1,24 @@
  header {
-   color: #9f9c9c;
-   padding: 20px 0;
-   margin-buttom: 40px;
-   text-transform: uppercase;
-   border-bottom: 2px solid #b0e0ea;
-   grid-area: header;
-   display: grid;
-   justify-content: space-between;
-   grid-template-columns: 1fr 1fr;
- }
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  color: #9f9c9c;
+  text-transform: uppercase;
+  border-bottom: 2px solid #b0e0ea;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+}
+
+header nav ul {
+    display: flex;
+    align-items: baseline;
+    list-style-type: none;
+}
+
+header nav li {
+    margin-right: 15px;
+}
