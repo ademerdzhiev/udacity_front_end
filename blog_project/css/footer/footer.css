@@ -1,5 +1,27 @@
 footer {
   grid-column: 1 / 4;
-  grid-row: 5 / 7;
-  background-color: #ffa500;
+  grid-row: 5 / 6;
+  color: #fff;
+  background-color: #9f9c9c;
+  padding: 20px 0;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+
+footer p {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.copyright {
+  color: #434344;
+  float: left;
+  margin-left: 30px;
+}
+
+footer img {
+   float: right;
+   margin-right: 10px;
+   margin-left: 10px;
 }
