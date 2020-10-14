@@ -1,11 +1,12 @@
 .cards {
-  grid-column: 2 / 4;
-  grid-row: 4 / 5;
-  padding: 1rem;
+  /* grid-column: 2 / 4;
+  grid-row: 4 / 5; */
+  grid-area: cards;
+  padding: 20px 10px;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #ececec;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .cards h3 {
@@ -19,6 +20,9 @@
   margin-bottom: .75rem;
 }
 
-/* .card-content {
-  background-color: #eee;
-} */
+.card-content {
+    border: 3px solid #ececec;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 5px;
+  }

@@ -1,12 +1,14 @@
 footer {
-  grid-column: 1 / 4;
-  grid-row: 5 / 6;
+  grid-area: ft;
+  /* grid-column: 1 / 4;
+  grid-row: 5 / 6; */
   color: #fff;
   background-color: #9f9c9c;
   padding: 20px 0;
-  /* display: flex; */
+  display: flex;
   /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  justify-content: center;
+  flex-direction: row;
 }
 
 footer p {
@@ -16,12 +18,12 @@ footer p {
 
 .copyright {
   color: #434344;
-  float: left;
+  float: center;
   margin-left: 30px;
 }
 
 footer img {
-   float: right;
+   float: center;
    margin-right: 10px;
    margin-left: 10px;
 }

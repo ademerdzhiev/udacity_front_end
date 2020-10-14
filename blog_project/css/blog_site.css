@@ -27,15 +27,39 @@ body {
   }
 
   .container {
-    max-width: 1250px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "hd"
+    "pic"
+    "sd"
+    "cont"
+    "cards"
+    "ft";
     margin: 0 auto;
     padding: 0 60px;
-    display: grid;
-    grid-template-columns: 0.4fr 0.3fr 0.3fr;
     grid-column-gap: 10px;
     grid-row-gap: 15px;
     background-color: #fff;
   }
 
+  @media(min-width: 900px) {
+    .container{
+        display: grid;
+        grid-template-columns: 320px auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "hd hd"
+        "pic cont"
+        "sd cards"
+        "ft ft";
+      }
+  }
+
   .grid {
+
   }

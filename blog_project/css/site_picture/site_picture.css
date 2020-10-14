@@ -1,7 +1,8 @@
 .site_picture {
-  grid-column: 1 / 2;
-  grid-row-start: 2 / 3;
-    min-height: 300px;
+  /* grid-column: 1 / 2;
+  grid-row-start: 2 / 3; */
+  grid-area: pic;
+  min-height: 300px;
   background-color: #d5c9e2;
   background-image:
     url("https://bustedhalo.com/wp-content/uploads/2015/03/Freezing-Time.jpg");

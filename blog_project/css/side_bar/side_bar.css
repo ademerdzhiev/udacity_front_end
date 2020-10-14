@@ -1,6 +1,7 @@
  .sidebar {
-  grid-column: 1 / 2;
-  grid-row: 3 / 5;
+  /* grid-column: 1 / 2;
+  grid-row: 3 / 5; */
+  grid-area: sd;
   min-height: 200px;
   border-top: 3px solid #693f7e;
   background-color: #f9f9f9;
