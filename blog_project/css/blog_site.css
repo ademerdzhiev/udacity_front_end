@@ -1,10 +1,10 @@
-@import url("./buttons/buttons.css");
 @import url("./header/header.css");
+@import url("./footer/footer.css");
+@import url("./side_bar/side_bar.css");
 @import url("./cards/cards.css");
 @import url("./content/content.css");
-@import url("./side_bar/side_bar.css");
 @import url("./site_picture/site_picture.css");
-@import url("./footer/footer.css");
+@import url("./buttons/buttons.css");
 
 body {
   text-align: center;
@@ -29,7 +29,6 @@ body {
   .container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     display: grid;
     grid-template-columns: 320px;
     grid-template-rows: auto auto;

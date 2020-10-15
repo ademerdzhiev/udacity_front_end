@@ -1,9 +1,6 @@
 .content {
+  position: relative;
   grid-area: cont;
-  /* grid-column: 2 / 4;
-  grid-row: 2 / 3; */
-  /* min-height: 500px;
-  background-color: #f5c531; */
 }
 
 .content h2 {
@@ -15,4 +12,16 @@
 .content p {
   font-size: 1rem;
   margin-bottom: .75rem;
+}
+
+.prev-story {
+  position: absolute;                  /* added */
+  bottom: 0;                           /* added */
+  left: 0;
+}
+
+.next-story {
+  position: absolute;                  /* added */
+  bottom: 0;                           /* added */
+  right: 0; 
 }

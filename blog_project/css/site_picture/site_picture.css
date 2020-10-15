@@ -1,6 +1,4 @@
 .site_picture {
-  /* grid-column: 1 / 2;
-  grid-row-start: 2 / 3; */
   grid-area: pic;
   min-height: 300px;
   background-color: #d5c9e2;

@@ -1,12 +1,14 @@
 .cards {
-  /* grid-column: 2 / 4;
-  grid-row: 4 / 5; */
   grid-area: cards;
   padding: 20px 10px;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #ececec;
   justify-content: center;
+}
+
+.cards h2 {
+  flex: 0 0 100%;
 }
 
 .cards h3 {

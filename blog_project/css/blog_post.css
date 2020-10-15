@@ -1,1 +1,63 @@
- 
+@import url("./header/header.css");
+@import url("./footer/footer.css");
+@import url("./side_bar/side_bar.css");
+@import url("./content/content.css");
+@import url("./buttons/buttons.css");
+@import url("./avatar/avatar.css");
+
+
+body {
+  text-align: center;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+      color: inherit;
+      text-decoration: none;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "hd"
+    "av"
+    "cont"
+    "sd"
+    "ft";
+    margin: 0 auto;
+    padding: 0 60px;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    background-color: #fff;
+  }
+
+  @media(min-width: 900px) {
+    .container{
+        display: grid;
+        grid-template-columns: 320px auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "hd hd"
+        "av cont"
+        "sd cont"
+        "ft ft";
+      }
+  }
+
+  .grid {
+
+  }
