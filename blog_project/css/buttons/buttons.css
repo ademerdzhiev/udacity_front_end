@@ -16,3 +16,14 @@ header button {
   color: #50c6db;
   padding: .5rem;
 }
+
+.content button {
+  border: none;
+  padding: 8px 25px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  /* border-radius: 1.25rem; */
+  background-color: #51bb7b;
+  justify-self: end;
+}

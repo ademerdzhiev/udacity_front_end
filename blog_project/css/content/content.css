@@ -3,8 +3,14 @@
   grid-area: cont;
 }
 
-.content h2 {
+.content h1 {
   font-size: 32px;
+  margin-bottom: 1rem;
+  color: #50c6db;
+}
+
+.content h2 {
+  font-size: 27px;
   margin-bottom: 1rem;
   color: #50c6db;
 }
@@ -14,14 +20,23 @@
   margin-bottom: .75rem;
 }
 
+#year-place {
+  font-weight: bold;
+  text-decoration: underline black;
+}
+
+.post {
+  padding-bottom: 30px
+}
+
 .prev-story {
-  position: absolute;                  /* added */
-  bottom: 0;                           /* added */
+  position: absolute;
+  bottom: 0;
   left: 0;
 }
 
 .next-story {
-  position: absolute;                  /* added */
-  bottom: 0;                           /* added */
-  right: 0; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

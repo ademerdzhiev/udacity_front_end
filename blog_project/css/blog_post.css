@@ -31,7 +31,7 @@ body {
     justify-content: center;
     display: grid;
     grid-template-columns: 320px;
-    grid-template-rows: auto auto;
+    grid-template-rows: 200px auto;
     grid-template-areas:
     "hd"
     "av"
@@ -45,16 +45,29 @@ body {
     background-color: #fff;
   }
 
-  @media(min-width: 900px) {
+  @media(min-width: 700px) and (max-width: 1000px) {
+    .container{
+        display: grid;
+        grid-template-columns: 320px auto 320px;
+        grid-template-rows: auto 320px auto;
+        grid-template-areas:
+        "hd hd hd"
+        "av cont cont"
+        "sd cont cont"
+        "ft ft ft";
+      }
+  }
+
+  @media(min-width: 1001px) {
     .container{
         display: grid;
         grid-template-columns: 320px auto auto;
         grid-template-rows: auto auto;
         grid-template-areas:
-        "hd hd"
-        "av cont"
-        "sd cont"
-        "ft ft";
+        "hd hd hd hd hd"
+        "av cont cont cont sd"
+        "av cont cont cont sd"
+        "ft ft ft ft ft";
       }
   }
 
