@@ -1,7 +1,9 @@
 .avatar {
   grid-area: av;
   min-height: 300px;
-  /* background-color: #d5c9e2; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .avatar h3 {
@@ -15,4 +17,8 @@
 .avatar img {
   border-radius: 50%;
   width: 150px;
+}
+
+.avatar ul {
+  list-style-type: none;
 }

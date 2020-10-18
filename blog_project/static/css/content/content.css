@@ -11,18 +11,13 @@
 
 .content h2 {
   font-size: 27px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   color: #50c6db;
 }
 
 .content p {
   font-size: 1rem;
   margin-bottom: .75rem;
-}
-
-#year-place {
-  font-weight: bold;
-  text-decoration: underline black;
 }
 
 .post {
@@ -39,4 +34,13 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+#year-place {
+  font-weight: bold;
+  text-decoration: underline black;
+}
+
+#to-be-continued {
+    font-weight: bold;
 }

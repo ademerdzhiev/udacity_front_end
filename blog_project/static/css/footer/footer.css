@@ -1,12 +1,9 @@
 footer {
   grid-area: ft;
-  /* grid-column: 1 / 4;
-  grid-row: 5 / 6; */
   color: #fff;
   background-color: #9f9c9c;
   padding: 20px 0;
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   flex-direction: row;
 }
@@ -18,8 +15,8 @@ footer p {
 
 .copyright {
   color: #434344;
-  float: center;
-  margin-left: 30px;
+  /* float: center; */
+  /* margin-left: 30px; */
 }
 
 footer img {

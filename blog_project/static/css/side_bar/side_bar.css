@@ -1,6 +1,4 @@
  .sidebar {
-  /* grid-column: 1 / 2;
-  grid-row: 3 / 5; */
   grid-area: sd;
   min-height: 200px;
   border-top: 3px solid #693f7e;
@@ -22,5 +20,5 @@
 }
 
 .sidebar img {
-  max-width: 100%;
+  max-width: 90%;
 }

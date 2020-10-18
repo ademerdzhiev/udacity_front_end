@@ -2,29 +2,34 @@
  <html>
     <head>
       <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Angel's Blog</title>
-      <link rel="stylesheet" href="../css/blog_post.css"/>
+      <link rel="stylesheet" href="./static/css/blog_post.css"/>
     </head>
     <div class="container">
       <header>
         <nav>
           <ul>
-            <li><a href="./blog_site.html">Home</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
         <button>Login</button>
       </header>
       <body>
-        <div class="grid avatar">
-          <img src="../pictures/avatar.jpg"
+        <div class="grid avatar reponsive">
+          <img src="./static/pictures/avatar.jpg"
        alt="avatar picture"/>
           <h3>Anguel Demerdjiev</h3>
-          <p>Location: Sofia, Bulgaria</p>
-          <p>Physicist with interests in programming, mathematics, history and
-            philosophy
-          </p>
+          <ul>
+              <li><p>Location: Sofia, Bulgaria</p></li>
+              <li>
+                <p>Physicist with interests in programming, mathematics, history and
+                  philosophy
+                </p>
+              </li>
+          </ul>
         </div>
         <div class="grid sidebar">
           <h3>Most Read stories</h3>
@@ -38,6 +43,13 @@
         <div class="grid content">
           <h2> A new beginning </h2>
           <div class="post">
+            <div class="pic">
+              <figure>
+                <img src="./static/pictures/asenevci_.jpg"
+                alt="Uprising of Asen Dynasty"/>
+                <figcaption>Uprising of Asen dynasty</figcaption>
+              </figure>
+            </div>
             <p>
               In the summer and the autumn of 1185 once again the Balkans have
               become a stage for the clash of world powers. The Sicilian Normans
@@ -74,6 +86,14 @@
                  breath approached the new emperor, bowed a bit and waited for
                  permission to speak.
             </p>
+            <p>
+              <div align="right" class="qoute">
+                <em><q>The time is in us and we are in the time it turns us and we turn it</q></em>
+            </div>
+              <div id="to-be-continued">
+                To be continued...
+              </div>
+            </p>
           </div>
           <div class="prev-story">
             <button><a href="#">< Previous</a></button>
@@ -87,15 +107,15 @@
         <p>
           <div class="copyright">Angel's Blog 2020</div>
           <a href="https://www.facebook.com/">
-            <img src="../pictures/iconfinder_Circled_Facebook_svg_32.png"
+            <img src="./static/pictures/iconfinder_Circled_Facebook_svg_32.png"
          alt="facebook link"/>
           </a>
           <a href="https://www.twitter.com/">
-            <img src="../pictures/iconfinder_Circled_Twitter_svg_32.png"
+            <img src="./static/pictures/iconfinder_Circled_Twitter_svg_32.png"
         alt="twitter link"/>
           </a>
           <a href="https://www.youtube.com/">
-            <img src="../pictures/iconfinder_Circled_Youtube_svg_32.png"
+            <img src="./static/pictures/iconfinder_Circled_Youtube_svg_32.png"
         alt="youtube link"/>
           </a>
         </p>
