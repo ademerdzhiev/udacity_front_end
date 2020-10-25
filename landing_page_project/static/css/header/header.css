@@ -1,1 +1,36 @@
- 
+/* header {
+  text-transform: uppercase;
+  border-bottom: 2px solid #b0e0ea;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+} */
+
+/*
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+/* header nav a {
+  margin-right: 15px;
+} */
+
+/* nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+} */
+
+/* .sticky {
+  position: fixed;
+  display: block;
+  width: 100%;
+} */

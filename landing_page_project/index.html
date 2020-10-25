@@ -5,19 +5,21 @@
     <meta charset="utf">
     <meta content="width=device-width, initial-scale=1.0"/>
     <title> Angel'd Landing Page </title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./static/css/styles.css">
   </head>
   <div class="container">
-    <header>
-      <nav>
-        <ul>
-          <li data-menuanchor="#about-section">About</li>
-          <li><a id="work-button" href="#">work</a></li>
-          <li data-menuanchor="#inspirations-section">inspiration</li>
-          <li>contacts</li>
-        <ul>
-      </nav>
-    </header>
+    <header id="header-h">
+      <div id="navbar">
+        <nav>
+          <ul>
+            <li><a id="about" href="#">about</a></li>
+            <li><a id="work" href="#">work</a></li>
+            <li><a id="inspirations" href="#">inspiration</a></li>
+            <li><a id="contacts" href="#">contacts</a></li>
+          <ul>
+        </nav>
+    </div>
+  </header>
     <body id="page">
       <div class="about">
         <section id="about-section">
@@ -56,7 +58,7 @@
       </div>
       <div class="inspirations">
         <section id="inspirations-section">
-          <h1>Inspirations </h1>
+          <h1>Inspirations</h1>
           <p>Just a quick look through what had kept me going and inspired me recently</p>
           <p>Sed luctus a est feugiat facilisis. Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Curabitur ut eleifend neque. Fusce nisi
