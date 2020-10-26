@@ -1,91 +1,59 @@
-<!doctype html>
+<head>
+  <link rel="stylesheet" href="./static/css/styles.css">
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0"/>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <title> Angel'd Landing Page </title>
-    <link rel="stylesheet" href="./static/css/styles.css">
-  </head>
-  <div class="container">
-    <header id="header-h">
-      <div id="navbar">
-        <nav class="navbar">
-          <ul>
-            <li><a id="about" href="#">about</a></li>
-            <li><a id="work" href="#">work</a></li>
-            <li><a id="inspirations" href="#">inspiration</a></li>
-            <li><a id="contacts" href="#">contacts</a></li>
-          <ul>
-        </nav>
-    </div>
-  </header>
-    <body id="page">
-      <div class="about">
-        <section id="about-section">
-          <h1>About</h1>
-          <div class="avatar">
-          </div>
-          <p>some info about me</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            finibus sagittis magna eu vehicula. In vestibulum in tellus non
-            mattis. Quisque porta interdum mauris. Sed vehicula viverra mattis.
-            Cras et diam at augue molestie posuere ac quis risus. Sed quis nunc
-            odio. Nunc placerat augue id odio consectetur, eget viverra dolor
-            malesuada. Vestibulum ligula sem, gravida id mauris id, elementum
-            auctor massa. Pellentesque semper diam at metus volutpat, sed volutpat
-             lectus convallis. In id justo sit amet tellus lobortis dapibus.
-             Duis eu venenatis turpis, dapibus porttitor tellus. Phasellus luctus
-             suscipit est et porta.
-          </p>
-        </section>
-      </div>
-      <div class="work">
-        <section id="work-section">
-          <h1>Work</h1>
-          <p>here's what i have been working on recently</p>
-          <p>Proin mollis maximus mi, sit amet tempus sem dapibus a. Donec non
-            odio non nibh mollis sodales. Aenean vestibulum nisi at ullamcorper
-            viverra. Suspendisse in blandit magna. Quisque ipsum odio, blandit et
-            maximus id, imperdiet ac elit. Donec arcu odio, placerat nec semper
-            et, rutrum a sem. Proin malesuada neque nec vulputate mattis. Proin
-            egestas eros id lectus eleifend aliquet. Etiam massa risus, laoreet
-            non maximus vitae, auctor eget ligula.
-          </p>
-          <div class="cards">
-          </div>
-        </section>
-      </div>
-      <div class="inspirations">
-        <section id="inspirations-section">
-          <h1>Inspirations</h1>
-          <p>Just a quick look through what had kept me going and inspired me recently</p>
-          <p>Sed luctus a est feugiat facilisis. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Curabitur ut eleifend neque. Fusce nisi
-            mi, laoreet in scelerisque ac, venenatis in tortor. Quisque ultricies
-            libero velit, sit amet lobortis quam vulputate placerat. Vestibulum
-            hendrerit mauris mollis, faucibus dui non, efficitur nunc. Proin id
-            ligula sed sem condimentum sodales eu in justo. Integer at mattis dui.
-             Sed sit amet magna tempus, vestibulum ex quis, ultricies nisl. Donec
-             lacus dui, malesuada in nisl id, congue suscipit enim. Sed tristique
-             sagittis vestibulum. Morbi accumsan ante sed odio scelerisque
-             placerat. Nulla eget pellentesque lacus.
-           </p>
-          <div class="quotes">
-          </div>
-          <div class="books">
-          </div>
-        </section>
-      </div>
-      <div class="contacts">
-        <section>
-          <h1>Contact</h1>
-        </section>
-      </div>
-    </body>
-    <footer>
-    </footer>
-    <script src="./java_script/app.js"> </script>
-  </div>
-</html>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="navbar-brand"><span>Angel's</span> page</a>
+    <ul>
+      <li><a href="#about-section">About</a></li>
+      <li><a href="#work-section">Work</a></li>
+      <li><a href="#contact-section">Contacts</a></li>
+    </ul>
+    <button class="navbar-button">
+      <span></span>
+    </button>
+  </nav>
+
+  <header class="header-class"></header>
+  <section id="about-section" class="container"><h2></h2>
+    <p>some info about me</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+      finibus sagittis magna eu vehicula. In vestibulum in tellus non
+      mattis. Quisque porta interdum mauris. Sed vehicula viverra mattis.
+      Cras et diam at augue molestie posuere ac quis risus. Sed quis nunc
+      odio. Nunc placerat augue id odio consectetur, eget viverra dolor
+      malesuada. Vestibulum ligula sem, gravida id mauris id, elementum
+      auctor massa. Pellentesque semper diam at metus volutpat, sed volutpat
+       lectus convallis. In id justo sit amet tellus lobortis dapibus.
+       Duis eu venenatis turpis, dapibus porttitor tellus. Phasellus luctus
+       suscipit est et porta.
+    </p>
+  </section>
+
+  <section id="work-section" class="container"><h2></h2>
+    <p>here's what i have been working on recently</p>
+    <p>Proin mollis maximus mi, sit amet tempus sem dapibus a. Donec non
+      odio non nibh mollis sodales. Aenean vestibulum nisi at ullamcorper
+      viverra. Suspendisse in blandit magna. Quisque ipsum odio, blandit et
+      maximus id, imperdiet ac elit. Donec arcu odio, placerat nec semper
+      et, rutrum a sem. Proin malesuada neque nec vulputate mattis. Proin
+      egestas eros id lectus eleifend aliquet. Etiam massa risus, laoreet
+      non maximus vitae, auctor eget ligula.
+    </p>
+  </section>
+
+  <section id="contact-section" class="container"><h2></h2>
+    <p>here's what i have been working on recently</p>
+    <p>Proin mollis maximus mi, sit amet tempus sem dapibus a. Donec non
+      odio non nibh mollis sodales. Aenean vestibulum nisi at ullamcorper
+      viverra. Suspendisse in blandit magna. Quisque ipsum odio, blandit et
+      maximus id, imperdiet ac elit. Donec arcu odio, placerat nec semper
+      et, rutrum a sem. Proin malesuada neque nec vulputate mattis. Proin
+      egestas eros id lectus eleifend aliquet. Etiam massa risus, laoreet
+      non maximus vitae, auctor eget ligula.
+    </p>
+  </section>
+  <script src="./java_script/app.js"> </script>
+</body>

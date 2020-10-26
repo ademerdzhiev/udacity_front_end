@@ -1,72 +1,74 @@
-header {
+.navbar {
   text-transform: uppercase;
-  border-bottom: 2px solid #b0e0ea;
-  padding: 20px 0px;
-  display: flex;
-  justify-content: space-between;
-}
-
-/*
-nav {
-  overflow: hidden;
-}*/
-
-nav ul {
-  display: flex;
+  background-color: #000;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
-
-/* header nav a {
-  margin-right: 15px;
-} */
-
-/* nav a {
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar a.navbar-brand {
   float: left;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 30px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.navbar a.navbar-brand span {
+  font-size: 28px;
+  font-weight: 700;
+}
+.navbar ul {
+  float: right;
+  list-style: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 50px;
+}
+.navbar ul li {
+  display: inline-block;
+}
+.navbar ul li a {
   display: block;
   text-align: center;
-  padding: 14px;
-  text-decoration: none;
-} */
+  min-width: 120px;
+  padding: 0 30px;
+}
+.navbar ul li a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+.navbar .navbar-toggler {
+  display: none;
+}
 
-/* .sticky {
-  position: fixed;
-  display: block;
+.header-class {
   width: 100%;
-} */
-
-ul {
-      /* overflow: hidden; */
-      background-color: #f42602;
-      position: fixed;
-      top: 0;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      float: left;
+  height: 100vh;
+  background: url("../static/pictures/universe1920.jpg") no-repeat center center;
+  background-size: cover;
+  background-color: #000;
 }
-
-ul li {
-        list-style-type: none;
-        display: inline-block;
-}
-
-ul li a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px 0px 15px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: arial;
-}
-
-.navbar a:hover {
-  color: #ffffff;
-}
-
 .container {
-  padding: 18px;
-  margin-top: 35px;
-  height: 2000px;
+  position: relative;
+  height: 100vh;
+  color: #fff;
+}
+.container h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vh;
 }

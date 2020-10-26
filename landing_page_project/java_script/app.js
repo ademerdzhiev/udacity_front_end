@@ -1,68 +1,35 @@
-function scroll(element) {
-  let elementQ = document.querySelector(element);
-  let elementPosition = elementQ.getBoundingClientRect().top;
-  window.scrollTo({
-  top: elementPosition,
-  left: 0,
-  behavior: 'smooth'
-  });
+const navbarButton = document.querySelector(".navbar-button");
+const navbarMenu = document.querySelector(".navbar ul");
+const navbarLinks = document.querySelectorAll(".navbar a");
+
+navbarButton.addEventListener("click", navbarButtonClick);
+
+function navbarButtonClick() {
+  navbarButton.classList.toggle("open-navbar-button");
+  navbarMenu.classList.toggle("open");
 }
 
-//SCROLL TO THE ABOUT SECTION
-let aboutSection = document.querySelector('#about');
-aboutSection.addEventListener('click', function() {
-  scroll('.about');
-});
+// navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
 
-//SCROLL TO THE WORK SECTION
-let workSection = document.querySelector('#work');
-workSection.addEventListener('click', function() {
-  scroll('.work');
-});
+for(let i=0; i<navbarLinks.length; i++) {
+  navbarLinks[i].addEventListener("click", navbarLinkClick);
+}
 
-//SCROLL TO THE INSPIRATIONS SECTION
-let inspirationsSection = document.querySelector('#inspirations');
-inspirationsSection.addEventListener('click', function() {
-  scroll('.inspirations')
-});
+function navbarLinkClick(event) {
 
+  smoothScroll(event); // Call the "smoothScroll" function
 
-//SCROLL TO THE CONTACTS SECTION
-let contactsSection = document.querySelector('#contacts');
-contactsSection.addEventListener('click', function() {
-  scroll('.contacts');
-});
+  if(navbarMenu.classList.contains("open")) { // Close navbarMenu in smaller screens
+    navbarButton.click();
+  }
 
-// function scroll(element, duration) {
-//   let elementQ = document.querySelector(element);
-//   let elementPosition = elementQ.getBoundingClientRect().top;
-//   let startPosition = window.pageYOffset;
-//   // let distance = elementPositionTop - startPosition;
-//   let navbarQ = document.querySelector('#header-h');
-//   let navbarH = navbarQ.offsetHeight;
-//   let startTime =  null;
-//
-//   let targetPosition = elementPosition - 2*navbarH;
-//
-//   function animation(currentTime) {
-//     if (startTime === null) {
-//       startTime = currentTime;
-//     }
-//
-//     let elapsedTime = currentTime - startTime;
-//     let run = easeFunc(elapsedTime, startPosition, targetPosition, duration);
-//     window.scrollTo(0, run);
-//
-//     if (elapsedTime < duration) {
-//       requestAnimationFrame(animation);
-//     }
-//   }
-//
-//   function easeFunc(elapsedTime, startPosition, targetPosition, duration) {
-// 	   elapsedTime /= duration;
-// 	   return elementPosition*elapsedTime*elapsedTime + startPosition;
-//   }
-//
-//   requestAnimationFrame(animation);
-// }
-//
+}
+
+function smoothScroll(event) {
+  event.preventDefault();
+  const targetId = event.currentTarget.getAttribute("href");
+  window.scrollTo({
+    top: targetId === "#" ? 0 : document.querySelector(targetId).offsetTop,
+    behavior: "smooth"
+  });
+}
