@@ -1,7 +1,7 @@
 const navbarButton = document.querySelector(".navbar-button");
 const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
-
+const navbarActiveMenu = document.querySelector(".navbar ul li a")
 navbarButton.addEventListener("click", navbarButtonClick);
 
 function navbarButtonClick() {
@@ -9,10 +9,21 @@ function navbarButtonClick() {
   navbarMenu.classList.toggle("open");
 }
 
-// navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinkClick));
+function activeSectionScroll(event) {
+  event.preventDefault();
+  const targetId = event.currentTarget.getAttribute("href");
+  const targetPostion = document.querySelector(targetId).offsetTop;
+  let scrollPostion = body.scrollTop;
+  console.log(scrollPosition)
+  if (scrollPostion >= targetPostion) {
+    activeSection;
+  }
+}
+navbarActiveMenu('scroll', activeSectionScroll);
 
 for(let i=0; i<navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", navbarLinkClick);
+  navbarLinks[i].addEventListener("scroll", activeSectionScroll);
 }
 
 function navbarLinkClick(event) {
@@ -33,3 +44,13 @@ function smoothScroll(event) {
     behavior: "smooth"
   });
 }
+
+function activeSection () {
+  navbarActiveMenu.classList.toggle("active");
+}
+
+
+// if (position >= target) {
+//          $('#navigation > ul > li > a').removeClass('active');
+//          $('#navigation > ul > li > a[href=#' + id + ']').addClass('active');
+//      }
