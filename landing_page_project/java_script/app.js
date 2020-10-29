@@ -17,8 +17,6 @@ function buildNavbar() {
 
 buildNavbar();//calling the navigation menu build function
 
-//CODE FOR SMOOTH SCROLL SECTION
-
 const navbarButton = document.querySelector(".navbar-button");
 const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
@@ -29,6 +27,7 @@ function navbarButtonClick() {
   navbarMenu.classList.toggle("open");
 }
 
+//CODE FOR SMOOTH SCROLL SECTION
 for(let i=0; i<navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", navbarLinkClick);
 }
@@ -50,10 +49,6 @@ function smoothScroll(event) {
     top: targetId === "#" ? 0 : document.querySelector(targetId).offsetTop,
     behavior: "smooth"
   });
-}
-
-function activeSection () {
-  navbarActiveMenu.classList.toggle("active");
 }
 
 //CODE FOR ACTIVE SCROLL SECTION
