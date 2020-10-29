@@ -22,8 +22,9 @@ const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
 
 navbarButton.addEventListener("click", navbarButtonClick);
+
 function navbarButtonClick() {
-  navbarButton.classList.toggle("open-navbar-button");
+  // navbarButton.classList.toggle("open-navbar-button");
   navbarMenu.classList.toggle("open");
 }
 
@@ -36,17 +37,24 @@ function navbarLinkClick(event) {
 
   smoothScroll(event); // Call the "smoothScroll" function
 
-  if(navbarMenu.classList.contains("open")) { // Close navbarMenu in smaller screens
+  if(navbarMenu.classList.contains("open")) { //navbar menu closes in smaller screens
     navbarButton.click();
   }
-
 }
 
 function smoothScroll(event) {
   event.preventDefault();
-  const targetId = event.currentTarget.getAttribute("href");
-  window.scrollTo({
-    top: targetId === "#" ? 0 : document.querySelector(targetId).offsetTop,
+
+  let targetId = event.currentTarget.getAttribute("href");
+
+  if (targetId === "#" ) {
+    targetId = "header";
+  } else {
+    targetId = event.currentTarget.getAttribute("href");
+    console.log(targetId);
+  }
+
+  document.querySelector(targetId).scrollIntoView({
     behavior: "smooth"
   });
 }
