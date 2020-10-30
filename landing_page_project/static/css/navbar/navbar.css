@@ -1,14 +1,12 @@
 .navbar {
   background-color: #000;
-  color: #fff;
-  border-bottom: 2.5px solid rgba(255,255,255,0.9);
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  text-transform: uppercase;
-  font-size: 18px;
-  padding: 0 30px;
+  border-bottom: 2px solid #fff;
   position: fixed;
+  width: 100%;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 0 30px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -19,18 +17,17 @@
   color: #fff;
 }
 
-.navbar a.navbar-brand {
+
+.navbar a.navbar-name {
   float: left;
-  height: inherit;
-  line-height: inherit;
   padding: 0 30px;
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 
-.navbar a.navbar-brand span {
-  font-size: 28px;
+.navbar a.navbar-name em {
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -39,7 +36,7 @@
   list-style: none;
   height: inherit;
   line-height: inherit;
-  padding: 0 50px;
+  padding: 0 15px;
 }
 
 .navbar ul li {
@@ -49,92 +46,15 @@
 .navbar ul li a {
   display: block;
   text-align: center;
-  min-width: 120px;
   padding: 0 30px;
 }
 
 .navbar ul li a.active {
   background-color: rgba(255,255,255,0.4);
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .navbar ul li a:hover {
-  background-color: rgba(255,255,255,0.2);
-}
-
-.navbar .navbar-button {
-  display: none;
-}
-
-@media only screen and (max-width: 760px) {
-  .navbar {
-    padding: 0;
-  }
-
-  .navbar ul {
-    width: 100%;
-    padding: 0;
-    background-color: rgba(0,0,0,0.9);
-    height: 100vh;
-    max-height: 0;
-    overflow: hidden;
-    transition: all ease-in-out 0.3s;
-  }
-
-  .navbar ul.open {
-    max-height: 40vh;
-  }
-
-  .navbar ul li {
-    width: 100%;
-  }
-
-  .navbar ul li a {
-    padding: 0;
-  }
-
-  .navbar .navbar-button {
-    display: block;
-    position: absolute;
-    height: 35px;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    color: #fff;
-    border: 3px solid #fff;
-    outline: none;
-    padding: 0 5px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .navbar .navbar-button span,
-  .navbar .navbar-button span::before,
-  .navbar .navbar-button span::after {
-    display: block;
-    content: '';
-    background-color: #fff;
-    height: 3px;
-    width: 28px;
-    transition: all ease-in-out 0.5s;
-  }
-
-  /* translating a horizontal line above the middle line*/
-  .navbar .navbar-button span::before {
-    transform: translateY(-8px);
-  }
-
-  /* translating a horizontal line below the middle line*/
-  .navbar .navbar-button span::after {
-    transform: translateY(5px);
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .navbar ul {
-    padding: 0 10px;
-  }
-  .navbar ul li a {
-    min-width: 100px;
-    padding: 0 20px;
-  }
+  text-decoration: underline;
 }

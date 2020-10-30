@@ -11,53 +11,33 @@ function buildNavbar() {
     navbarItem.innerHTML = `<a href="#${id}">${dataNav}</a>`;
     elementLi.appendChild(navbarItem);
   }
-
   navbar.appendChild(elementLi);
+
+    for (navbarLink of document.querySelectorAll(".navbar a")) {
+      navbarLink.addEventListener("click", navbarLinkClick);
+    }
 }
 
 buildNavbar();//calling the navigation menu build function
 
-const navbarButton = document.querySelector(".navbar-button");
-const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
 
-navbarButton.addEventListener("click", navbarButtonClick);
-
-function navbarButtonClick() {
-  // navbarButton.classList.toggle("open-navbar-button");
-  navbarMenu.classList.toggle("open");
-}
 
 //CODE FOR SMOOTH SCROLL SECTION
-for(let i=0; i<navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", navbarLinkClick);
-}
-
 function navbarLinkClick(event) {
-
-  smoothScroll(event); // Call the "smoothScroll" function
-
-  if(navbarMenu.classList.contains("open")) { //navbar menu closes in smaller screens
-    navbarButton.click();
-  }
+  smoothScroll(event);
 }
+
 
 function smoothScroll(event) {
   event.preventDefault();
 
   let targetId = event.currentTarget.getAttribute("href");
-
-  if (targetId === "#" ) {
-    targetId = "header";
-  } else {
-    targetId = event.currentTarget.getAttribute("href");
-    console.log(targetId);
-  }
-
   document.querySelector(targetId).scrollIntoView({
     behavior: "smooth"
   });
 }
+
 
 //CODE FOR ACTIVE SCROLL SECTION
 //boolean function testing whether an element is in the viewport or not
