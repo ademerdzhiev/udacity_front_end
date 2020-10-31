@@ -49,7 +49,26 @@ body {
   padding: 5vh;
   transform: translate(-50%, -50%);
   font-size: 2em;
+  visibility: hidden;
 }
+
+.container h2.active {
+  animation: 2s fadeIn;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+     visibility: hidden;
+     opacity: 0;
+   }
+   100% {
+     visibility: visible;
+     opacity: 1;
+   }
+}
+
 
 .footer-mp {
     background: #000;
@@ -120,7 +139,7 @@ body {
   padding: 0 30px;
 }
 
-.navbar ul li a.active {
+.navbar a.active {
   background-color: rgba(255,255,255,0.4);
   text-decoration: underline;
   font-style: italic;
@@ -130,13 +149,11 @@ body {
   text-decoration: underline;
 }
 
-
 @media screen and (max-width: 500px){
   .navbar {
     padding: 0 0;
     text-align: center;
     line-height: 40px;
-    /* font-size: 0.5em; */
   }
 
   .container {

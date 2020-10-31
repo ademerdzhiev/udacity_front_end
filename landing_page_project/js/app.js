@@ -8,21 +8,21 @@ function buildNavbar() {
     let navbarItem = document.createElement('li');
     const id = section.getAttribute('id');
     const dataNav = section.getElementsByTagName("h1")[0].innerHTML;
-    navbarItem.innerHTML = `<a href="#${id}">${dataNav}</a>`;
+    navbarItem.innerHTML = `<a class="nav-item" href="#${id}">${dataNav}</a>`;
     elementLi.appendChild(navbarItem);
   }
   navbar.appendChild(elementLi);
 
-    for (navbarLink of document.querySelectorAll(".navbar a")) {
-      navbarLink.addEventListener("click", navbarLinkClick);
-    }
+  for (navbarLink of document.querySelectorAll(".navbar a")) {
+    navbarLink.addEventListener("click", navbarLinkClick);
+  }
 }
 
 buildNavbar();//calling the navigation menu build function
 
 const navbarLinks = document.querySelectorAll(".navbar a");
-
-
+const sectionClasses = document.querySelectorAll('.container h2');
+console.log(sectionClasses);
 //CODE FOR SMOOTH SCROLL SECTION
 function navbarLinkClick(event) {
   smoothScroll(event);
@@ -57,13 +57,14 @@ document.addEventListener('scroll', function activeSection() {
   for (const section of sections) {
 
     if (isInViewport(section)) {
-
+      section.querySelector('.container h2').classList.add('active');
       for (link of navbarLinks) {
         if (link.getAttribute('href') == ('#' + section.getAttribute('id'))) {
           link.classList.add('active');
         }
       }
     } else {
+      section.querySelector('.container h2').classList.remove('active');
       for (link of navbarLinks) {
         if (link.getAttribute('href') == ('#' + section.getAttribute('id'))) {
             link.classList.remove('active');
