@@ -1,5 +1,4 @@
 let baseURL = 'https:/api.openweathermap.org/data/2.5/weather?q=';
-let apiKey = '&appid=db6b5692c93fa0ab2dfd49046fb28490';
 
 document.getElementById('generate').addEventListener('click', performAction);
 
