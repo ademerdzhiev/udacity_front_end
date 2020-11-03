@@ -10,12 +10,23 @@
   <header>
   </header>
   <body>
-    <p> press the button </p>
-    <div>
-      <button id="generate"> Go </button>
-    </div>
-    <footer>
-    </footer>
-    <script src='./app.js'></script>
+    <div id='app'>
+      <div class="holder headline">
+        Weather Journal App
+      </div>
+      <div class="holder zip">
+        <label for="zip">ONLY FOR THE USA</label>
+        <input type="text" id="zip" placeholder="enter usa zip code here">
+      </div>
+      <div class="holder">
+        <label >IF YOU LIVE IN THE REAL WORLD</label>
+        <input type="text" id="city" placeholder="enter the city/town">
+        <input type="text" id="country" placeholder="enter the country (use short form)">
+      </div>
+        <button id="generate"> Get Forecast </button>
+      <footer>
+      </footer>
+      <script type="module" src='./app.js'></script>
+  </div>
   </body>
 </html>
