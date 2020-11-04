@@ -18,25 +18,23 @@ const port = 8000;
 const server = app.listen(port, listening);
 
 function listening() {
-  console.log('running on localhost: ${port}');
+  console.log(`running on localhost: ${port}`);
 }
 
-app.get('/all', sendData);
+const dataForecast = [];
 
-function sendData(request, response) {
-  response.send(projectData);
+app.get('/all', getData);
+
+function getData(request, response) {
+  response.send(dataForecast);
 };
 
-app.post('/add', callBack);
 
-function callBack(request, response) {
-  response.send('POST received');
-}
-
-const data = [];
-
-app.post('/forecast', addForecast);
+app.post('/addForecast', addForecast);
 
 function addForecast(request, response) {
-  data.push(req.body);
+
+  dataForecast.push(request.body);
+  response.send(dataForecast);
+  console.log(dataForecast);
 }
