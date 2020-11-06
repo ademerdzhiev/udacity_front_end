@@ -5,38 +5,47 @@ let month = d.getMonth() +1;
 let newDate = d.getDate() +'.'+ month +'.'+ d.getFullYear();
 let baseURLWorld = 'https:/api.openweathermap.org/data/2.5/weather?q=';
 let baseURLUSA = 'https:/api.openweathermap.org/data/2.5/weather?zip=';
+const entryHistory = document.querySelector('#entry-history');
 
+//adding click listener to the button
 document.getElementById('generate').addEventListener('click', performAction);
 
+//function to be executed uppon clicking the button
 function performAction(e) {
-  const apiKey = api_key;
+  const apiKey = api_key; //getting the enclosed in separate file api
+
+  //trying to fetch data from the input fields
   try {
     const city = document.getElementById('city').value;
     const country = document.getElementById('country').value;
-    const location = city + "," + country;
-    console.log(location);
-    if (location != ',') {
+    const zip = document.getElementById('zip-usa').value;
+
+    //logic wether to use the zip-code field or the city/town and country fields
+    if (city != '' && country != '') {
+      const location = city + "," + country;
+
       getForecast(baseURLWorld, location, apiKey).then(function(data) {
-        postData('/addForecast', {location: data.name + ', ' + data.sys.country,
+        postData('/addForecast', {location: data.name +
+          ', ' +
+          data.sys.country,
          date: newDate,
          temp: data.main.temp});
         updateUI();
       });
+    } else if (zip != '') {
+        const location = zip;
+        getForecast(baseURLUSA, location, apiKey).then(function(data) {
+          postData('/addForecast', {location: data.name +
+            ', ' +
+            data.sys.country,
+           date: newDate,
+           temp: data.main.temp});
+          updateUI();
+        });
     }
-  } catch(error) {console.log(error)}
 
-  try {
-    const zip = document.getElementById('zip-usa').value;
-    const location = zip;
-    console.log(location);
-    getForecast(baseURLUSA, location, apiKey).then(function(data) {
-      postData('/addForecast', {location: data.name + ', ' + data.sys.country,
-       date: newDate,
-       temp: data.main.temp});
-      updateUI();
-    });
   } catch(error) {console.log(error)}
-}
+} //closing bracket of the performAction function
 
 const getForecast = async (baseURL, location, apiKey) => {
 
@@ -71,6 +80,7 @@ const postData = async ( url = '', data = {}) => {
       }
   }
 
+// async function for the user interface update
 const updateUI = async () => {
   const request = await fetch('/all');
   try {
@@ -78,6 +88,27 @@ const updateUI = async () => {
     document.getElementById('location').innerHTML = 'City: ' + allData[allData.length -1].location;
     document.getElementById('date').innerHTML = 'Date: ' + allData[allData.length -1].date;
     document.getElementById('temp').innerHTML = 'Temperature: ' + allData[allData.length -1].temp + ' C';
+
+    //Dynamic creation of div elements holding the entry history and updating
+    // on the page
+    const elementP = document.createDocumentFragment();
+
+    let divLocation = document.createElement('div');
+    let divDate = document.createElement('div');
+    let divTemperature = document.createElement('div');
+    divLocation.innerHTML = 'City: ' + allData[allData.length -1].location;
+    divDate.innerHTML = 'Date: ' + allData[allData.length -1].date;
+    divTemperature.innerHTML = 'Temperature: ' + allData[allData.length -1].temp + ' C';
+    elementP.appendChild(divLocation);
+    elementP.appendChild(divDate);
+    elementP.appendChild(divTemperature)
+    entryHistory.appendChild(elementP);
+
+    //setting the input feilds to empty values
+    document.getElementById('city').value = '';
+    document.getElementById('country').value = '';
+    document.getElementById('zip-usa').value = '';
+
   } catch(error) {
     console.log(error)
   }

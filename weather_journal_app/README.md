@@ -14,3 +14,14 @@ In order to use the app for your purposes follow these steps:
 5. Replace the '***...' text with your api key
 6. Enjoy using the app! :)
 #######################
+
+######STARTING THE APP#########
+1. You need to have preinstalled
+    - node.js
+    - npm
+    - cors
+    - express
+2. Open your terminal in the folder 
+3. Run the command: node server.js
+4. In your browser go to http://localhost:8000/
+5. You are now ready to use the app! :)
