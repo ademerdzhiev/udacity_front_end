@@ -21,12 +21,12 @@ function listening() {
   console.log(`running on localhost: ${port}`);
 }
 
-const dataForecast = [];
+// const dataForecast = [];
 
 app.get('/all', getData);
 
 function getData(request, response) {
-  response.send(dataForecast);
+  response.send(projectData);
 };
 
 
@@ -34,7 +34,7 @@ app.post('/addForecast', addForecast);
 
 function addForecast(request, response) {
 
-  dataForecast.push(request.body);
-  response.send(dataForecast);
-  console.log(dataForecast);
+  projectData = request.body;
+  response.send(projectData);
+  console.log(projectData);
 }

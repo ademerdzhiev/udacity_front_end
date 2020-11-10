@@ -18,7 +18,8 @@ function performAction(e) {
   try {
     const city = document.getElementById('city').value;
     const country = document.getElementById('country').value;
-    const zip = document.getElementById('zip-usa').value;
+    const zip = document.getElementById('zip').value;
+    const content = document.getElementById('feelings').value;
 
     //logic wether to use the zip-code field or the city/town and country fields
     if (city != '' && country != '') {
@@ -29,7 +30,8 @@ function performAction(e) {
           ', ' +
           data.sys.country,
          date: newDate,
-         temp: data.main.temp});
+         temp: data.main.temp,
+         content: content});
         updateUI();
       });
     } else if (zip != '') {
@@ -39,7 +41,8 @@ function performAction(e) {
             ', ' +
             data.sys.country,
            date: newDate,
-           temp: data.main.temp});
+           temp: data.main.temp,
+          content: content});
           updateUI();
         });
     }
@@ -84,10 +87,12 @@ const postData = async ( url = '', data = {}) => {
 const updateUI = async () => {
   const request = await fetch('/all');
   try {
-    const allData = await request.json();
-    document.getElementById('location').innerHTML = 'City: ' + allData[allData.length -1].location;
-    document.getElementById('date').innerHTML = 'Date: ' + allData[allData.length -1].date;
-    document.getElementById('temp').innerHTML = 'Temperature: ' + allData[allData.length -1].temp + ' C';
+    const data = await request.json();
+    document.getElementById('location').innerHTML = 'City: ' + data.location;
+    document.getElementById('date').innerHTML = 'Date: ' + data.date;
+    document.getElementById('temp').innerHTML = 'Temperature: ' + data.temp + ' C';
+    document.getElementById('content').innerHTML = 'Content: ' + data.content;
+
 
     //Dynamic creation of div elements holding the entry history and updating
     // on the page
@@ -96,18 +101,25 @@ const updateUI = async () => {
     let divLocation = document.createElement('div');
     let divDate = document.createElement('div');
     let divTemperature = document.createElement('div');
-    divLocation.innerHTML = 'City: ' + allData[allData.length -1].location;
-    divDate.innerHTML = 'Date: ' + allData[allData.length -1].date;
-    divTemperature.innerHTML = 'Temperature: ' + allData[allData.length -1].temp + ' C';
+    let divContent = document.createElement('div');
+
+    divLocation.innerHTML = 'City: ' + data.location;
+    divDate.innerHTML = 'Date: ' + data.date;
+    divTemperature.innerHTML = 'Temperature: ' + data.temp + ' C';
+    divContent.innerHTML = 'Content: ' + data.content;
+
     elementP.appendChild(divLocation);
     elementP.appendChild(divDate);
-    elementP.appendChild(divTemperature)
+    elementP.appendChild(divTemperature);
+    elementP.appendChild(divContent);
     entryHistory.appendChild(elementP);
 
     //setting the input feilds to empty values
     document.getElementById('city').value = '';
     document.getElementById('country').value = '';
-    document.getElementById('zip-usa').value = '';
+    document.getElementById('zip').value = '';
+    document.getElementById('feelings').value = '';
+
 
   } catch(error) {
     console.log(error)
