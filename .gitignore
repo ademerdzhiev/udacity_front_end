@@ -1,3 +1,4 @@
 node_modules/
 *.pdf
 open_weather_map_api.js
+.env
