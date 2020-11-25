@@ -1,5 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
+console.log(`Your API key is ${process.env.API_KEY}`);
 
 var path = require('path')
 const express = require('express')
@@ -24,3 +25,8 @@ app.listen(8080, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+// 
+// var textapi = new meaningCloud({
+//    application_id: process.env.API_ID,
+//    application_key: process.env.API_KEY
+// });
