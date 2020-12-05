@@ -6,8 +6,7 @@ function handleSubmit(event) {
 
     console.log(formURL);
 
-    postData(formURL);
-
+    postData(formURL).then((data) => updateUI(data));
     // check what text was put into the form field
     // let formText = document.getElementById('name').value
     // checkForName(formText)
@@ -38,6 +37,12 @@ const postData = async(url = '') => {
   } catch (error) {
     console.log('error', error);
   }
+}
+
+function updateUI(data) {
+    document.getElementById('polarity').innerHTML = 'Polarity: ' + data.score_tag;
+    document.getElementById('confidence').innerHTML = 'Confidence: ' + data.confidence;
+    document.getElementById('subjectivity').innerHTML = 'Subjectivity: ' + data.subjectivity;
 }
 
 export { handleSubmit }
