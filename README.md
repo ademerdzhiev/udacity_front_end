@@ -1,6 +1,6 @@
 # udacity_front_end
 udacity front end projects
-1. In the folder blog_project is the [personal blog project](https://github.com/ademerdzhiev/udacity_front_end/blob/master/blog_project) 
+1. In the folder blog_project is the [personal blog project](https://ademerdzhiev.github.io/udacity_front_end/blog_project/) 
 
 2. In the folder landing_page_project is the landing page project
 
